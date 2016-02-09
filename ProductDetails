@@ -1,0 +1,53 @@
+<html>
+	<head>
+
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>	
+		<script src="Pd.js" ></script>
+		<link rel="stylesheet" type="text/css" media="all" href="Pd.css"/>
+		<title>
+				Product Details
+		</title>
+	</head>
+	<body>
+	
+	
+		<header>
+			<div id="prodForm">
+				<form>
+					Product Number: 
+					<input type="text" name="prodId">
+					<button type="button" onclick="alert('Searching...')"><img src="go.png" alt="Go" style="width:15px;height:16px">
+				</form>
+			</div>
+			
+			<div id="shutdown">
+				Close Tab
+			</div>
+		</header>
+				
+			
+		<div  id="content">
+			<div id="prodTitle">
+				<h2>
+					Product Title
+				</h2>
+			</div>
+			<div id="descShort"> 
+				<p>
+					Product Short description
+				</p>
+			</div>
+			<div id="descLong">
+				<p>
+					Product Long Description
+				</p>
+			</div>
+			<div class="images">
+				<img src="" alt="No Product is selected">
+				<img src="" alt="No Product is selected">
+				<img src="" alt="No Product is selected">
+			</div>
+		</div>	
+	</body>
+</html>
