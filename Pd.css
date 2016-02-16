@@ -1,28 +1,29 @@
 
 
 /*
-Setup a basic body
+Setup a basic body, page is none scrollable to maximise effectiveness of absolute positioning.
+Subject to change.
 */
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-	overflow-y: hidden;
     font-family: Arial;
     font-size: 18px;
 	background-color: #F3F1ED;
 }
 
 
+
 /*
-Header is relative so z-index: 1 guarantees always displayed on top
+Header is relative so z-index: 1 guarantees always displayed on top (now irrelevent as scrolling is disabled
 */
-header {
+.header {
     background-color: white;
     padding: 10px;
     text-decoration: none;
     position: fixed;
-	height: 10%;
+	height: 15%;
     width: 100%;
     z-index: 1;
     -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
@@ -30,55 +31,95 @@ header {
 	display:inline-block;
 }
 
+/*
+
+	Designed for optimal use on Lenovo x230 laptop screen.
+*/
+
 #prodForm {
-	float:left;
-}
-	
-#shutdown {
-	text-decoration: underline;
-	float:left;
-	margin-left: 20px;
+	position:absolute;
+	top: 5%;
+	left: 30%;
+	margin: auto;
+	padding: 10px;
 }
 
+button {
+	width: 40px;
+	height: 26px;
+	vertical-align: bottom;
+}
 
-#content {
+#cProdNo {
+	margin-right: 100px;
+	float: right;
+    padding: 10px;
+	position: relative;
+	border: 1px solid #009933;
+}
+
+.container {
     background-color: #F3F1ED;
-    padding: 52px 10px 10px 10px;
-    position: relative;
+	/*
+	padding: 52px 10px 10px 10px;
+	*/
+	position: relative;
     width: auto;
     height: 100%;
-    -webkit-box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
-
+     
 }
+
 
 #prodTitle{
-	position:fixed;
-	top:20%;
-	left:9%;
-}
-
-#descShort{
-	position: fixed;
-	top:30%;
-	left:10%;
-	
+	width:100%;
+	float:left;
+	padding:10px; 
+	border: 1px solid #80ffaa;
 }
 
 #descLong{
-	position: fixed;
-	top:42%;
-	left:10%;
-	
+	width:100%;
+    float:left;
+    padding:10px; 
+	margin-top: 5px;
+	border: 1px solid #80ffaa;
 }
 
-
-
+/*
+	this div class controlls the overall positioning of the images
+*/
 .images{
-	position: absolute;
+	position: relative;
 	display: inline;
-	left:30%;
-	bottom: 30%;
-
-	
+	left: 100px;
+	top: 130px;
 }
+
+/*
+	For the responsive web design
+*/
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
