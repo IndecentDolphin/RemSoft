@@ -1,53 +1,59 @@
 <html>
 	<head>
-
-		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>	
-		<script src="Pd.js" ></script>
 		<link rel="stylesheet" type="text/css" media="all" href="Pd.css"/>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="pd.js"></script>
 		<title>
-				Product Details
+				John Lewis Gift List - Product Description
 		</title>
 	</head>
 	<body>
-	
-	
-		<header>
-			<div id="prodForm">
-				<form>
-					Product Number: 
-					<input type="text" name="prodId">
-					<button type="button" onclick="alert('Searching...')"><img src="go.png" alt="Go" style="width:15px;height:16px">
-				</form>
-			</div>
+		<!--Body is split into a header section and a content section -->
+		<div class="header">
+			<img src="JlLogo.png" style="width:250px;height:75px;padding:0px;"> 
+		
+				<div id="prodForm">
+					<form>
+						Product Number: 
+						<input type="text" name="prodId">
+						<button type="button"><img src="go.png" alt="Go" style="width:15px;height:16px"></button>
+					</form>					
+				</div>
 			
-			<div id="shutdown">
-				Close Tab
-			</div>
-		</header>
-				
 			
-		<div  id="content">
-			<div id="prodTitle">
-				<h2>
-					Product Title
-				</h2>
+			<!--Expecting ASP will replace the n/a with prod number that has been searched-->
+				<div id="cProdNo"> 
+					Current Product number: 
+					<asp:Label ID="lblProductCode" Runat="server">n/a</asp:Label>
+				</div>
+			
+		</div>
+		
+			
+		<div class="container">
+			<!-- The prodTitle div keeps disappearing underneath header div. Work around is to add space with &nbsp for now --> 
+			<h1>&nbsp; </h1>
+			<h1>&nbsp; </h1>
+			<h1>&nbsp; </h1>
+			<div class="row">
+				<div id="prodTitle"> <p>Product Short Desc</p></div>
+								
 			</div>
-			<div id="descShort"> 
-				<p>
-					Product Short description
-				</p>
+			<div class="row">
+				<div id="descLong"> <p>Product Long description</p></div>	
 			</div>
-			<div id="descLong">
-				<p>
-					Product Long Description
-				</p>
-			</div>
+		
+
+			
+			<!--Expecting ASP to populate images, not sure how that would work due to lack of experience with ASP-->
 			<div class="images">
-				<img src="" alt="No Product is selected">
-				<img src="" alt="No Product is selected">
-				<img src="" alt="No Product is selected">
+				<img src="" alt="No Product is selected" style="width:270px;height:250px;"hspace="20">
+				<img src="" alt="No Product is selected" style="width:270px;height:250px;"hspace="20">
+				<img src="" alt="No Product is selected" style="width:270px;height:250px;"hspace="20">
 			</div>
+		</div>	
 		</div>	
 	</body>
 </html>
